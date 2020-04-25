@@ -27,12 +27,15 @@ type
     lbl_CreateAcc: TLabel;
     pns_Sys: TPanel;
     img_SysButtons: TImage;
+    img_LoginVia: TImage;
+    img_Panel: TImage;
     procedure FormCreate(Sender: TObject);
     procedure lbl_LoginClick(Sender: TObject);
     procedure lbl_ForgPassClick(Sender: TObject);
     procedure lbl_CreateAccClick(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure img_SysButtonsClick(Sender: TObject);
+    procedure img_LoginViaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,6 +69,11 @@ procedure Tfrm_Login.FormResize(Sender: TObject);
 begin
   if (Width >360) or (Width <360) then  Width:=360;
   if (Height >640) or (Height <640)then  Height:=640
+end;
+
+procedure Tfrm_Login.img_LoginViaClick(Sender: TObject);
+begin
+  ShowMessage('You are touch the button "Login via"');
 end;
 
 procedure Tfrm_Login.img_SysButtonsClick(Sender: TObject);
